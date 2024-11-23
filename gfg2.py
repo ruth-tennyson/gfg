@@ -14,3 +14,33 @@
 # Constraints:
 # 1 ≤ arr.size() ≤ 105
 # 0 ≤ arr[i] ≤ 105
+
+class Solution:
+    def pushZerosToEnd(self,arr):
+        n=len(arr)
+        a=[]
+        for i in arr:
+            if i!=0:
+                a.append(i)
+        m=len(a)
+        for k in range(m,n):
+            a.append(0)
+        for i in range(n):
+            arr[i]=a[i]
+    	                
+
+#{ 
+ # Driver Code Starts
+#Initial Template for Python 3
+
+if __name__ == '__main__':
+    tc = int(input())
+    while tc > 0:
+        arr = list(map(int, input().strip().split()))
+        ob = Solution()
+        ob.pushZerosToEnd(arr)
+        for x in arr:
+            print(x, end=" ")
+        print()
+        tc -= 1
+# } Driver Code Ends
