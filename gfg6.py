@@ -32,8 +32,6 @@ class Solution:
                             k=k+1
                             break
                 com.append(arr[i])
-                
- 
             if k>1:
                 break
         temp.sort()
